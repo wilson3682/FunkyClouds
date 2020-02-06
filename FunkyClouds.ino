@@ -1,4 +1,6 @@
 /*
+https://github.com/FastLED/FastLED/blob/master/examples/ColorPalette/ColorPalette.ino
+
 TODO:
  
  example show oscis+p
@@ -1180,7 +1182,7 @@ void ChangePalettePeriodically()
     lastSecond = secondHand;
     if( secondHand ==  0)  { 
       currentPalette = RainbowColors_p;         
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 10)  { 
       currentPalette = RainbowStripeColors_p;   
@@ -1188,15 +1190,15 @@ void ChangePalettePeriodically()
     }
     if( secondHand == 15)  { 
       currentPalette = RainbowStripeColors_p;   
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 20)  { 
       SetupPurpleAndGreenPalette();             
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 25)  { 
       SetupTotallyRandomPalette();              
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 30)  { 
       SetupBlackAndWhiteStripedPalette();       
@@ -1204,15 +1206,15 @@ void ChangePalettePeriodically()
     }
     if( secondHand == 35)  { 
       SetupBlackAndWhiteStripedPalette();       
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 40)  { 
       currentPalette = CloudColors_p;           
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 45)  { 
       currentPalette = PartyColors_p;           
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
     if( secondHand == 50)  { 
       currentPalette = myRedWhiteBluePalette_p; 
@@ -1220,7 +1222,7 @@ void ChangePalettePeriodically()
     }
     if( secondHand == 55)  { 
       currentPalette = myRedWhiteBluePalette_p; 
-      currentBlending = BLEND; 
+      currentBlending = LINEARBLEND; 
     }
   }
 }
@@ -1323,9 +1325,4 @@ void NoiseExample8() {
       }
     }
     ShowFrame();
-  }  
-
-
-
-
-
+  }
